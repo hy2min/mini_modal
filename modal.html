@@ -15,7 +15,7 @@
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
-            border-radius: 10%;
+            border-radius: 5px;
             border: none;
             cursor: pointer;
             font-size: 16px;
@@ -28,8 +28,9 @@
         .modal {
             display: none;
             position: fixed;
+            border-radius: 10px;
             top: 50%;
-            left: 50%;
+            left:50%;
             transform: translate(-50%, -50%);
             padding: 20px;
             background-color: #fff;
@@ -60,6 +61,37 @@
             top: 10px;
             right: 10px;
         }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -70,41 +102,39 @@
     <div class="modal" id="myModal">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <div class="modal-content">
-            <h2>내용 기입</h2>
-            <br>
-            <div class="name">
-                <label for="name">Name</label>
-                <input type="text" id="name">
+            <h2>Contents</h2>
+
+            <div class="form-group">
+                <label for="InputName">Name</label>
+                <input type="text" id="InputName">
             </div>
 
-            <br>
-            <div class="image">
-                <label for="image">Image_URL</label>
-                <input type="text" id="image_url">
+            <div class="form-group">
+                <label for="InputImage_url">Image_URL</label>
+                <input type="text" id="InputImage_url">
             </div>
 
-            <br>
-            <div class="mbti">
-                <label for="MBTI">MBTI</label>
-                <input type="text" id="mbti">
+            <div class="form-group">
+                <label for="InputMbti">MBTI</label>
+                <input type="text" id="InputMbti">
+            </div>
 
+            <div class="form-group">
+                <label for="InputCol_type">Collaboration_type</label>
+                <input type="text" id="InputCol_type">
             </div>
-            <br>
-            <div class="collab">
-                <label for="collab">Collaboration_type</label>
-                <input type="text" id="col_type">
+
+            <div class="form-group">
+                <label for="InputAdvantage">Advantage</label>
+                <input type="text" id="InputAdvantage">
             </div>
-            <br>
-            <div class="advantage">
-                <label for="advantage">Advantage</label>
-                <input type="text" id="advantage">
+
+            <div class="form-group">
+                <label for="InputBlog_url">Blog_URL</label>
+                <input type="text" id="InputBlog_url">
             </div>
-            <br>
-            <div class="blog">
-                <label for="blog">Blog_URL</label>
-                <input type="text" id="blog_url">
-            </div>
-            <br>
+
+            <button class="submit-btn" onclick="closeModal()">Submit</button>
         </div>
     </div>
 
